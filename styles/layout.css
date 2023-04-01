@@ -1,0 +1,11 @@
+@media screen {
+
+    #content {
+        margin: 0 auto;
+        width: 600px;
+    }
+
+    h1 {
+        text-align: center;
+    }
+}
