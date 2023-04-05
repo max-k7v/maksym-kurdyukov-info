@@ -1,5 +1,5 @@
 # Simple workflow for deploying Github Pages
-name: Publish Github Pages
+name: Publish Static
 
 on:
   push:
