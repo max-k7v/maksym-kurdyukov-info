@@ -1,0 +1,27 @@
+# Site
+baseURL: https://maksym.kurdyukov.info/
+theme: clean-vibe
+publishDir: _site
+enableRobotsTXT: true
+# Menu
+menu:
+  main:
+  - name: About
+    pageRef: /
+    weight: 10
+  - name: Notes
+    pageRef: /notes
+    weight: 20
+# Content
+defaultContentLanguage: en
+languages:
+  en:
+    languageCode: en_US
+    languageName: English
+    title: Maksym Kurdyukov
+    weight: 10
+  ru:
+    languageCode: ru_UA
+    languageName: Русский
+    title: Максим Курдюков
+    weight: 20
