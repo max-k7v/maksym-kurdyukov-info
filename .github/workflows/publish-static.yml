@@ -20,7 +20,7 @@ concurrency:
 jobs:
   publish:
     environment:
-      name: github-pages
+      name: publish-static
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-22.04
     steps:
