@@ -13,4 +13,8 @@ Text before image.
 Text after iamge.
 
 ## Diagram
-TODO render draw.io diagram
+Diagram test
+```mermaid
+flowchart TD
+  Start --> Stop
+```

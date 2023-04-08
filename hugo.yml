@@ -1,6 +1,6 @@
 # Site
 baseURL: https://maksym.kurdyukov.info/
-theme: clean-vibe
+theme: micro
 publishDir: _site
 enableRobotsTXT: true
 # Menu
