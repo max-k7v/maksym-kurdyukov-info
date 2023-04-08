@@ -38,5 +38,5 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
       - name: Deploy
-        id: deploy
+        id: deployment
         uses: actions/deploy-pages@v2
