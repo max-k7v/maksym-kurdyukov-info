@@ -21,22 +21,26 @@ jobs:
   publish:
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: ${{ steps.deploy.outputs.page_url }}
     runs-on: ubuntu-22.04
     steps:
-      - name: Checkout
+      - id: checkout
+        name: Checkout
         uses: actions/checkout@v3
         with:
           lfs: true
-      - name: Setup Hugo
+      - id: setup
+        name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: 0.111.3
           extended: true
-      - name: Build site
+      - id: build
+        name: Build site
         run: hugo --minify
-      - name: Upload artifact
+      - id: upload
+        name: Upload artifact
         uses: actions/upload-pages-artifact@v1
-      - name: Deploy
-        id: deployment
+      - id: deploy
+        name: Deploy
         uses: actions/deploy-pages@v2

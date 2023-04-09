@@ -1,3 +1,6 @@
 {{ define "main" }}
-{{ .Content }}
+  <article class="single">
+    <h1>{{ .Title | safeHTML }}</h2>
+    <summary>{{ .Content }}</summary>
+  </article>
 {{ end }}
