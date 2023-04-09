@@ -2,7 +2,6 @@
 baseURL: https://maksym.kurdyukov.info
 theme: micro
 publishDir: _site
-enableRobotsTXT: true
 # Menu
 menu:
   main:
@@ -13,11 +12,8 @@ menu:
     pageRef: /notes
     weight: 20
 # Content
+enableRobotsTXT: true
 defaultContentLanguage: en
-languages:
-  en:
-    languageName: English
-    weight: 10
-  ru:
-    languageName: Русский
-    weight: 20
+disableKinds:
+- taxonomy
+- term
