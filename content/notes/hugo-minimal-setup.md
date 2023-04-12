@@ -25,24 +25,31 @@ hugo v0.111.3-5d4eb...+extended windows/amd64
 Add configuration without tags and taxonomy.
 ```yml
 baseURL: http://localhost
+# Top level menu
 menu:
   main:
-  - name: Start
-    pageRef: /
-    weight: 10
-  - name: Items
-    pageRef: /items
-    weight: 20
+    - name: Start
+      pageRef: /
+      weight: 10
+    - name: Items
+      pageRef: /items
+      weight: 20
+# Generate only HTML
 disableKinds:
-- taxonomy
-- term
+  - RSS
+  - sitemap
+  - taxonomy
+  - term
 ```
 
 Add default template for *item*: `file:archetypes/default.md`
-```
+```markdown
 ---
+<!-- Get title from name -->
 title: {{ replace .Name "-" " " | title }}
+<!-- Full timestamp -->
 date: {{ .Date }}
+<!-- Publish immediately -->
 draft: false
 ---
 ```
@@ -54,7 +61,7 @@ Content "content/items/todo.md" created
 ```
 
 Add start page `hugo new _index.md` and edit `file: content/_index.md`
-```
+```markdown
 ---
 title: :)
 date: <TIMESTAMP>
@@ -85,7 +92,7 @@ Create default HTML template `file:layouts/_default/baseof.html`:
 ```
 
 HTML template for start page `file:layouts/index.html`:
-```
+```html
 {{ define "main" }}
 <section>
   {{ .Content }}
@@ -94,7 +101,7 @@ HTML template for start page `file:layouts/index.html`:
 ```
 
 HTML template for single *item* `file:layouts/_default/single.html`:
-```
+```html
 {{ define "main" }}
   <article class="single">
     <h1>{{ .Title | safeHTML }}</h2>
@@ -104,16 +111,18 @@ HTML template for single *item* `file:layouts/_default/single.html`:
 ```
 
 HTML template for index page `file:layouts/_default/list.html`:
-```
+```html
 {{ define "main" }}
   <section>
     {{ .Content }}
   </section>
+  <!-- Reversed sort by date -->
   {{ range .Pages.ByPublishDate.Reverse }}
     <article class="list">
       <h2>
         <a href="{{ .RelPermalink }}">{{ .Title | safeHTML }}</a>
       </h2>
+      <!-- First 50 symbols from summary -->
       <summary>{{ .Summary | truncate 50 | safeHTML }}</summary>
     </article>
   {{ end }}
@@ -130,13 +139,11 @@ Web Server is available at http://localhost:nnnn/
 ```
 
 ## Just numbers
-Empty page rendered in 1ms
+Empty page rendered in 1ms.
 
 ![GET Time](1ms-page.png "Render time of empty page")
 
-Rendering of page with few images ~10ms
-
-Rendering of acceptable video frame ~40ms (24 fps)
+Rendering of page with styles and images up to ~10ms.
 
 ## Ignore working files
 Ignore for source control `file:.gitignore`
@@ -145,3 +152,6 @@ public/*
 resources/*
 .hugo_build.lock
 ```
+
+## Download minimal file set
+[Link to repo](https://github.com/max-k7v/hugo-mini)

@@ -1,10 +1,8 @@
-My business card
-
 ```sh
 # build site
 hugo
 # serve with livereload
-hugo server
+hugo server --disableFastRender --navigateToChanged
 # add note
-hugo new notes/<>.md
+hugo new notes/<note-title>.md
 ```
