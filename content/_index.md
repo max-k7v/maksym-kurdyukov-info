@@ -1,29 +1,14 @@
 ---
 title: "Maksym Kurdyukov"
+draft: false
 ---
 
-## About
-Hello World!
-
-Some text... after disabled actions.
-
-## Media content
-
-### Image
-Is visible image?
+## Image
 
 Text before image.
 ![small image](small-image.png)
-Text after iamge.
+Text after image.
 
-### Diagrams
-Mermaid test
-
-```mermaid
-flowchart TD
-  Start --> Stop
-```
-
-drawio test
-
+## Diagrams
+draw.io
 ![drawio diagram](test.drawio.svg "Example of draw.io diagram")

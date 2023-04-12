@@ -129,9 +129,14 @@ Watching ...
 Web Server is available at http://localhost:nnnn/
 ```
 
+## Just numbers
 Empty page rendered in 1ms
 
 ![GET Time](1ms-page.png "Render time of empty page")
+
+Rendering of page with few images ~10ms
+
+Rendering of acceptable video frame ~40ms (24 fps)
 
 ## Ignore working files
 Ignore for source control `file:.gitignore`
@@ -139,10 +144,4 @@ Ignore for source control `file:.gitignore`
 public/*
 resources/*
 .hugo_build.lock
-```
-
-## Notes
-Put images to folder with name equals to *item*. Page `todo` can use image from `file:content/items/todo/pic.png`:
-```
-![Image alternative](pic.png "Mouse hover title")
 ```

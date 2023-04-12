@@ -1,5 +1,6 @@
 ---
 title: "Notes"
+draft: false
 ---
 
 ## Latest notes
