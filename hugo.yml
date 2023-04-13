@@ -1,19 +1,19 @@
 # Site
 baseURL: https://maksym.kurdyukov.info
 theme: micro
-publishDir: _site
 # Menu
 menu:
   main:
-  - name: About
-    pageRef: /
-    weight: 10
-  - name: Notes
-    pageRef: /notes
-    weight: 20
+    - name: About
+      pageRef: /
+      weight: 10
+    - name: Notes
+      pageRef: /notes
+      weight: 20
 # Content
-enableRobotsTXT: true
+publishDir: _site
 defaultContentLanguage: en
 disableKinds:
-- taxonomy
-- term
+  - RSS
+  - taxonomy
+  - term
