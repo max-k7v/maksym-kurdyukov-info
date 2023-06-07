@@ -138,13 +138,6 @@ Watching ...
 Web Server is available at http://localhost:nnnn/
 ```
 
-## Just numbers
-Empty page rendered in 1ms.
-
-![GET Time](1ms-page.png "Render time of empty page")
-
-Rendering of page with styles and images up to ~10ms.
-
 ## Ignore working files
 Ignore for source control `file:.gitignore`
 ```

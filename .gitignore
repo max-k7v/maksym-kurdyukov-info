@@ -1,4 +1,5 @@
-.idea/*
-_site/*
-resources/*
+.idea/
+_site/
+resources/
+node_modules/
 .hugo_build.lock

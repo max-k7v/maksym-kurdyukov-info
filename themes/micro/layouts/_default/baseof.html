@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="stylesheet" href="/styles/layout.css">
+    {{ with resources.Get "styles/layout.css" | resources.ToCSS | resources.Minify }}
+    <link rel="stylesheet" href="{{ .RelPermalink }}">
+    {{ end }}
     <title>{{ .Title | safeHTML }}</title>
 </head>
 <body>
