@@ -7,7 +7,7 @@
       <h2>
         <a href="{{ .RelPermalink }}">{{ .Title | safeHTML }}</a>
       </h2>
-      <summary>{{ .Summary | truncate 50 | safeHTML }}</summary>
+      <summary>{{ .Summary | truncate 80 | safeHTML }}</summary>
     </article>
   {{ end }}
 {{ end }}

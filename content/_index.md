@@ -1,14 +1,10 @@
 ---
-title: "Maksym Kurdyukov"
+title: "For test only"
 draft: false
 ---
 
-## Image
+This is not demo. It just experimental static page.
 
-Text before image.
-![small image](small-image.png)
-Text after image.
+![smile diagram](smile.drawio.svg "draw.io smile")
 
-## Diagrams
-draw.io
-![drawio diagram](test.drawio.svg "Example of draw.io diagram")
+In case you open this, please visit my [LinkedIn](https://www.linkedin.com/in/max-k7v/).

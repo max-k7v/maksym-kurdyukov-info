@@ -1,7 +1,6 @@
 ---
-title: "Notes"
+title: "My notes"
 draft: false
 ---
 
-## Latest notes
-TODO-DO-DO
+My notes, code snippets, drafts and experiment results.

@@ -1,3 +1,10 @@
+{{ $page := .Page }}
 {{ range .Site.Menus.main }}
-  <a href="{{ .URL }}">{{ .Name | safeHTML }}</a>
+  {{ $class := slice }}
+  {{ if $page.IsMenuCurrent .Menu . }}
+    {{ $class = append "active" $class }}
+  {{ else if $page.HasMenuCurrent .Menu . }}
+    {{ $class = append "active-ancestor" $class }}
+  {{ end }}
+  <a href="{{ .URL | safeURL }}" class="{{ delimit $class ` ` }}">{{ .Name | safeHTML }}</a>
 {{ end }}
