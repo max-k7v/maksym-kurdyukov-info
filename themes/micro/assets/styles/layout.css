@@ -1,11 +1,14 @@
 @media screen {
-
   header, nav, main, footer {
       margin: 0 auto;
       width: 600px;
   }
+}
 
-  h1, h2, h3 {
-      text-align: center;
-  }
+nav a.active {
+  text-decoration: none;
+}
+
+article img {
+  max-width: 100%;
 }

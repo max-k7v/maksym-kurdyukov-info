@@ -17,3 +17,7 @@ disableKinds:
   - RSS
   - taxonomy
   - term
+# Blocks of code
+markup:
+  highlight:
+    style: emacs

@@ -1,14 +1,8 @@
 ---
-title: "Maksym Kurdyukov"
+title: "Start"
 draft: false
 ---
 
-## Image
+Experimental landing page. Thanks to draw.io and SVG.
 
-Text before image.
-![small image](small-image.png)
-Text after image.
-
-## Diagrams
-draw.io
-![drawio diagram](test.drawio.svg "Example of draw.io diagram")
+![smile diagram](smile.drawio.svg "draw.io smile")
