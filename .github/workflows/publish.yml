@@ -25,21 +25,21 @@ jobs:
     steps:
       - id: checkout
         name: "Checkout"
-        uses: "actions/checkout@v3"
+        uses: "actions/checkout@v6"
         with:
           lfs: true
       - id: setup
         name: "Setup Hugo"
-        uses: "peaceiris/actions-hugo@v2"
+        uses: "peaceiris/actions-hugo@v3"
         with:
-          hugo-version: 0.111.3
+          hugo-version: 0.157.0
           extended: true
       - id: build
         name: "Build site"
         run: "hugo --minify"
       - id: upload
         name: "Upload artifact"
-        uses: "actions/upload-pages-artifact@v1"
+        uses: "actions/upload-pages-artifact@v4"
       - id: deploy
         name: "Deploy"
-        uses: "actions/deploy-pages@v2"
+        uses: "actions/deploy-pages@v4"

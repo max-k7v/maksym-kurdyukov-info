@@ -18,7 +18,7 @@ After review [top generators](https://jamstack.org/generators/) - [Hugo](https:/
 
 To check `hugo version`:
 ```out
-hugo v0.111.3-5d4eb...+extended windows/amd64
+hugo v0.157.0-7747ab...
 ```
 
 ## Minimal file set
